@@ -1,0 +1,26 @@
+package io.github.cursodsousa.msavaliadorcredito.services;
+
+import java.util.Optional;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import io.github.cursodsousa.msavaliadorcredito.entities.SituacaoCliente;
+import io.github.cursodsousa.msavaliadorcredito.infra.clients.Cliente;
+import io.github.cursodsousa.msavaliadorcredito.infra.clients.ClienteResourceClient;
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class AvaliadorCreditoService {
+	
+	private final ClienteResourceClient clientesClient;
+
+	public SituacaoCliente obterSituacaoCliente(String cpf) {
+		ResponseEntity<Optional<Cliente>> dadosClientesResponse = clientesClient.dadosClientes(cpf);
+		return SituacaoCliente
+				.builder()
+				.cliente(dadosClientesResponse)
+				.build();
+	}
+}

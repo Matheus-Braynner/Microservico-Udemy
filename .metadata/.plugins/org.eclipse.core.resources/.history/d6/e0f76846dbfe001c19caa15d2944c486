@@ -1,0 +1,17 @@
+package io.github.cursodsousa.msavaliadorcredito.infra.clients;
+
+import java.util.Optional;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import io.github.cursodsousa.msclientes.entities.Cliente;
+
+@FeignClient(value = "msclientes", path = "/clientes")
+public interface ClienteResourceClient {
+
+	@GetMapping(params = "cpf")
+	ResponseEntity<Optional<Cliente>> dadosClientes(@RequestParam("cpf")String cpf);
+}

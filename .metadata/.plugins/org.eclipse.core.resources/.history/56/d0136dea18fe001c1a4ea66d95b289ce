@@ -1,0 +1,13 @@
+package io.github.cursodsousa.mscartoes.entities;
+
+import javax.persistence.Entity;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+public class ClienteCartao {
+
+}

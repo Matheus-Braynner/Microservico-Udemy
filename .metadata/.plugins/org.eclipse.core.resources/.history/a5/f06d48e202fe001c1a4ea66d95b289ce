@@ -1,0 +1,5 @@
+package io.github.cursodsousa.mscartoes.repositories;
+
+public class CartoesRepository {
+
+}

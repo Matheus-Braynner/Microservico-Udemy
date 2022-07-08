@@ -1,0 +1,31 @@
+package io.github.cursodsousa.msavaliadorcredito.services;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import io.github.cursodsousa.msavaliadorcredito.entities.SituacaoCliente;
+import io.github.cursodsousa.msavaliadorcredito.infra.clients.CartoesPorClienteResponse;
+import io.github.cursodsousa.msavaliadorcredito.infra.clients.CartoesResourceClient;
+import io.github.cursodsousa.msavaliadorcredito.infra.clients.Cliente;
+import io.github.cursodsousa.msavaliadorcredito.infra.clients.ClienteResourceClient;
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class AvaliadorCreditoService {
+	
+	private final ClienteResourceClient clientesClient;
+	private final CartoesResourceClient cartoesClient;
+
+	public SituacaoCliente obterSituacaoCliente(String cpf) {
+		ResponseEntity<Cliente> dadosClientesResponse = clientesClient.dadosClientes(cpf);
+		ResponseEntity<List<CartoesPorClienteResponse>> cartoesResponse = cartoesClient.getCartoesByCliente(cpf);
+		return SituacaoCliente
+				.builder()
+				.cliente(dadosClientesResponse.getBody())
+				.cartoes(cartoes)
+				.build();
+	}
+}

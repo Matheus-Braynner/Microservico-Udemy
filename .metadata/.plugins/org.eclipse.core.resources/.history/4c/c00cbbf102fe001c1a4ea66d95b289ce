@@ -1,0 +1,21 @@
+package io.github.cursodsousa.mscartoes.entities;
+
+import java.math.BigDecimal;
+
+import javax.persistence.Entity;
+
+import io.github.cursodsousa.mscartoes.entities.enums.BandeiraCartao;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+public class Cartao {
+
+		private Long id;
+		private String nome;
+		private BandeiraCartao bandeira;
+		private BigDecimal renda;
+		private BigDecimal limiteBasico;
+}

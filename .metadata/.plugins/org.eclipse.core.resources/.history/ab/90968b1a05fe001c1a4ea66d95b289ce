@@ -1,0 +1,27 @@
+package io.github.cursodsousa.mscartoes.controllers;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.github.cursodsousa.mscartoes.dto.CartaoSaveRequest;
+import io.github.cursodsousa.mscartoes.entities.Cartao;
+
+@RestController
+@RequestMapping(value = "/cartoes")
+public class CartoesController {
+	
+	@GetMapping
+	public String status() {
+		return "ok";
+	}
+	
+	@PostMapping
+	public ResponseEntity<Cartao> cadastra(@RequestBody CartaoSaveRequest request) {
+		Cartao cartao = request.toModel();
+	}
+
+}

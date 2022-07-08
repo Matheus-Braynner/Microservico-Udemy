@@ -1,0 +1,16 @@
+package io.github.cursodsousa.msavaliadorcredito.services;
+
+import org.springframework.stereotype.Service;
+
+import io.github.cursodsousa.msavaliadorcredito.entities.SituacaoCliente;
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class AvaliadorCreditoService {
+
+	public SituacaoCliente obterSituacaoCliente(String cpf) {
+		return null;
+		
+	}
+}

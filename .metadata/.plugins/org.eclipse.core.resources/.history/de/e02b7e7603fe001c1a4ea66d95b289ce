@@ -1,0 +1,11 @@
+package io.github.cursodsousa.mscartoes.services;
+
+import org.springframework.stereotype.Service;
+
+import io.github.cursodsousa.mscartoes.repositories.CartaoRepository;
+
+@Service
+public class CartaoService {
+
+	private final CartaoRepository repository;
+}

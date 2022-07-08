@@ -1,0 +1,17 @@
+package io.github.cursodsousa.mscartoes.dto;
+
+import java.math.BigDecimal;
+
+import io.github.cursodsousa.mscartoes.entities.ClienteCartao;
+import lombok.Data;
+
+@Data
+public class CartoesPorClienteResponse {
+	private String nome;
+	private String bandeira;
+	private BigDecimal limiteLiberado;
+	
+	public static CartoesPorClienteResponse fromModel(ClienteCartao model) {
+		return new CartoesPorClienteResponse();
+	}
+}
