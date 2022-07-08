@@ -1,0 +1,26 @@
+package io.github.cursodsousa.msavaliadorcredito.infra.clients;
+
+import java.math.BigDecimal;
+
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import io.github.cursodsousa.mscartoes.entities.enums.BandeiraCartao;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class Cartao {
+
+		private Long id;
+		private String nome;
+		private BandeiraCartao bandeira;
+		private BigDecimal renda;
+		private BigDecimal limiteBasico;
+		
+}

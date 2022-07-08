@@ -12,5 +12,6 @@ public class Cliente implements Serializable {
 	
 	private Long id;
 	private String nome;	
+	private Integer idade;
 
 }

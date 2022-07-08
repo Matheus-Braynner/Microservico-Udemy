@@ -1,0 +1,5 @@
+package io.github.cursodsousa.msavaliadorcredito.entities;
+
+public class DadosAvaliacao {
+
+}
