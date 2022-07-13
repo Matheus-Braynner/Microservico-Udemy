@@ -1,7 +1,0 @@
-package io.github.cursodsousa.msclientes.entities;
-
-import java.io.Serializable;
-
-public class Cliente implements Serializable {
-
-}

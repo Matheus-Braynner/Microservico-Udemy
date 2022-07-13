@@ -1,0 +1,12 @@
+package io.github.cursodsousa.mscartoes.config.mqueue;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmissaoCartaoSubscriber {
+	
+	public void receberSolicitacaoEmissao(String payload) {
+		System.out.println(payload);
+	}
+
+}

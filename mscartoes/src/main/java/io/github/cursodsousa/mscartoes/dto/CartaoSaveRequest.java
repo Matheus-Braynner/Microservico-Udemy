@@ -5,8 +5,10 @@ import java.math.BigDecimal;
 import io.github.cursodsousa.mscartoes.entities.Cartao;
 import io.github.cursodsousa.mscartoes.entities.enums.BandeiraCartao;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class CartaoSaveRequest {
 	
 	private String nome;

@@ -1,0 +1,14 @@
+package io.github.cursodsousa.msavaliadorcredito.config.mqueue;
+
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.stereotype.Component;
+
+import lombok.RequiredArgsConstructor;
+
+@Component
+@RequiredArgsConstructor
+public class SolicitacaoEmissaoCartaoPublisher {
+
+	private final RabbitTemplate rabbitTemplate;
+	
+}

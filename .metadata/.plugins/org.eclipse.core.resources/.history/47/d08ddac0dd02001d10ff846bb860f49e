@@ -1,0 +1,8 @@
+package io.github.cursodsousa.msavaliadorcredito.config.mqueue;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class SolicitacaoEmissaoCartaoPublisher {
+
+}
